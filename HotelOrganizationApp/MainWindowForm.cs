@@ -11,9 +11,9 @@ using System.Configuration;
 
 namespace HotelOrganizationApp
 {
-    public partial class Form1 : Form
+    public partial class MainWindowForm : Form
     {
-        public Form1()
+        public MainWindowForm()
         {
             InitializeComponent();
         }
@@ -241,5 +241,28 @@ namespace HotelOrganizationApp
             MessageBox.Show("Bye!");
         }
         #endregion
+
+        // Help Button
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            FormCollection fc = Application.OpenForms;
+
+            bool isOpen = false;
+
+            foreach (Form form in fc)
+            {
+                if (form.Name == "HelpForm") isOpen = true;
+            }
+
+            if (isOpen)
+            {
+                fc["HelpForm"].BringToFront();
+            }
+            else
+            {
+                helpForm.Show();
+            }
+        }
     }
 }
