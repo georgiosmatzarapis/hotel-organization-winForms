@@ -423,6 +423,7 @@ namespace HotelOrganizationApp
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 746);
+            this.ControlBox = false;
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.dtCheckinReservation);
             this.Controls.Add(this.btnSearchReservation);

@@ -89,5 +89,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelLibrary\HotelLibrary.csproj">
+      <Project>{2d930fe0-1bc4-487d-ae14-d19dcad343bc}</Project>
+      <Name>HotelLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Configuration;
@@ -20,16 +13,16 @@ namespace HotelOrganizationApp
         }
 
         // App.config data
-        private static readonly string email_link = ConfigurationManager.AppSettings["email"];
-        private static readonly string linkedin_link = ConfigurationManager.AppSettings["linkedin"];
-        private static readonly string gitlab_link = ConfigurationManager.AppSettings["gitlab"];
-        private static readonly string facebook_link = ConfigurationManager.AppSettings["facebook"];
+        private static readonly string _email_link = ConfigurationManager.AppSettings["email"];
+        private static readonly string _linkedin_link = ConfigurationManager.AppSettings["linkedin"];
+        private static readonly string _gitlab_link = ConfigurationManager.AppSettings["gitlab"];
+        private static readonly string _facebook_link = ConfigurationManager.AppSettings["facebook"];
 
         private void email_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
-                Process.Start(email_link);
+                Process.Start(_email_link);
             }
             catch (Exception ex)
             {
@@ -42,7 +35,7 @@ namespace HotelOrganizationApp
         {
             try
             {
-                Process.Start(linkedin_link);
+                Process.Start(_linkedin_link);
             }
             catch (Exception ex)
             {
@@ -54,7 +47,7 @@ namespace HotelOrganizationApp
         {
             try
             {
-                Process.Start(gitlab_link);
+                Process.Start(_gitlab_link);
             }
             catch (Exception ex)
             {
@@ -66,7 +59,7 @@ namespace HotelOrganizationApp
         {
             try
             {
-                Process.Start(facebook_link);
+                Process.Start(_facebook_link);
             }
             catch (Exception ex)
             {
